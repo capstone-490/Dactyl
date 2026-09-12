@@ -1,31 +1,22 @@
-name: "User Story"
-description: "Submit a new user story with tracking, estimations, and criteria"
+name: User Story
+description: Submit a new user story with tracking, estimations, and criteria
 title: "[Story]: <Short descriptive name>"
 labels: ["story", "feature:needs-triage"]
 body:
   - type: textarea
     id: user_story
     attributes:
-      label: "User Story Description"
-      description: "Must follow standard story format."
-      placeholder: "As a user X, I want to do Y, so that I can Z."
+      label: User Story Description
+      description: Must follow standard story format.
+      placeholder: As a user X, I want to do Y, so that I can Z.
       value: "As a user "
-    validations:
-      required: true
-
-  - type: input
-    id: story_points
-    attributes:
-      label: "Story Points"
-      description: "Numerical estimate of effort (e.g., Fibonacci: 1, 2, 3, 5, 8, 13...)."
-      placeholder: "e.g., 5"
     validations:
       required: true
 
   - type: dropdown
     id: story_points
     attributes:
-      label: "Story Points"
+      label: Story Points
       description: "Numerical estimate of effort (e.g., Fibonacci: 1, 2, 3, 5, 8, 13...)."
       options:
         - "1"
@@ -41,33 +32,33 @@ body:
   - type: dropdown
     id: priority
     attributes:
-      label: "Priority"
-      description: "Select the priority/value ranking of this story."
+      label: Priority
+      description: Select the priority/value ranking of this story.
       options:
-        - "Urgent"
-        - "High"
-        - "Medium"
-        - "Low"
+        - Urgent
+        - High
+        - Medium
+        - Low
     validations:
       required: true
 
   - type: dropdown
     id: risk
     attributes:
-      label: "Risk"
-      description: "Assess the risk level of implementing this story; to users or to team"
+      label: Risk
+      description: Assess the risk level of implementing this story; to users or to team
       options:
-        - "Low"
-        - "Medium"
-        - "High"
+        - Low
+        - Medium
+        - High
     validations:
       required: true
 
   - type: textarea
     id: acceptance_criteria
     attributes:
-      label: "Acceptance Criteria"
-      description: "What conditions must be satisfied for this story to be complete?"
+      label: Acceptance Criteria
+      description: What conditions must be satisfied for this story to be complete?
       placeholder: |
         - [ ] Given [precondition], when [action], then [outcome].
         - [ ] ...
@@ -87,8 +78,8 @@ body:
   - type: textarea
     id: task_breakdown
     attributes:
-      label: "Testing Plan"
-      description: "List task breakdown. Provide hours time estimate for each"
+      label: Testing Plan
+      description: List task breakdown. Provide hours time estimate for each
       placeholder: |
         - [ ] Design: API format (1)
         - [ ] Implement UI A
@@ -97,26 +88,14 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: testing_strategy
-    attributes:
-      label: "Testing Plan"
-      description: "Define your unit-tests and overall test plan. Provide time estimate (h)."
-      placeholder: |
-        - [ ] Unit-test: Coverage for controllers/services (1)
-        - [ ] Tests: Blackbox / API endpoint execution (2)
-        - [ ] Tests: Regression testing suite (1)
-    validations:
-      required: false
-
   - type: checkboxes
     id: signoff_checklist
     attributes:
-      label: "Signoff Checklist"
+      label: Signoff Checklist
       options:
-        - label: "Set points, priority, risk, feature label (feature:...), sub-tasks w/ estimate"
+        - label: Set points, priority, risk, feature label (feature:...), sub-tasks w/ estimate"
           required: true
-        - label: "Assigned to an Iteration"
+        - label: Assigned to an Iteration
           required: false
-        - label: "Stakeholder signoff obtained (+label applied)"
+        - label: Stakeholder signoff obtained (+label applied)
           required: false
